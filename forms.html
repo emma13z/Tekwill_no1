@@ -6,7 +6,7 @@
     <title>Registration Form</title>
   </head>
   <body>
-    <form>
+    <form action="/action_page.php" method="get">
       <fieldset>
         <legend>Basic User Information:</legend>
         <label for="fname">Full Name:</label>
@@ -30,20 +30,38 @@
       <fieldset>
         <legend>Address Information:</legend>
         <span>Street Address:</span>
-        <textarea name="street-address" rows="2" cols="20"></textarea><br>
+        <textarea name="street-address" rows="2" cols="20"></textarea><br />
         <span>Country:</span>
-        <input list="countries" name="countries">
+        <input list="countries" name="countries" />
         <datalist id="countries">
-          <option value="USA">
-          <option value="UK">
-          <option value="Belgium">
-          <option value="France">
-          <option value="Spain">
-        </datalist><br>
+          <option value="USA"></option>
+          <option value="UK"></option>
+          <option value="Belgium"></option>
+          <option value="France"></option>
+          <option value="Spain"></option></datalist
+        ><br />
         <label for="city">City:</label>
         <input type="text" id="city" name="city" /><br />
         <label for="postal-code:">Postal Code:</label>
         <input type="number" id="postal-code" name="postal-code" /><br />
+      </fieldset>
+      <fieldset>
+        <legend>Preferences:</legend>
+        <span>Preferred Contact Method:</span>
+        <input type="checkbox" id="email" name="email" value="email" />
+        <label for="email"> Email</label>
+        <input type="checkbox" id="phone" name="phone" value="phone" />
+        <label for="phone">Phone</label>
+        <input
+          type="checkbox"
+          id="post-mail"
+          name="post-mail"
+          value="post-mail"
+        />
+        <label for="postal-mail">Postal Mail</label><br />
+        <input type="color" id="favcolor" name="favcolor" value="#ff0000" />
+        <label for="favcolor">Favorite color:</label>
+      </fieldset>
     </form>
   </body>
 </html>
