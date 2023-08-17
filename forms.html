@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width-device-width, initial scale=1.0" />
@@ -38,18 +38,19 @@
           <option value="UK"></option>
           <option value="Belgium"></option>
           <option value="France"></option>
-          <option value="Spain"></option></datalist
-        ><br />
+          <option value="Spain"></option>
+        </datalist>
+        <br />
         <label for="city">City:</label>
         <input type="text" id="city" name="city" /><br />
-        <label for="postal-code:">Postal Code:</label>
+        <label for="postal-code">Postal Code:</label>
         <input type="number" id="postal-code" name="postal-code" /><br />
       </fieldset>
       <fieldset>
         <legend>Preferences:</legend>
         <span>Preferred Contact Method:</span>
-        <input type="checkbox" id="email" name="email" value="email" />
-        <label for="email"> Email</label>
+        <input type="checkbox" id="email1" name="email1" value="email1" />
+        <label for="email1">Email</label>
         <input type="checkbox" id="phone" name="phone" value="phone" />
         <label for="phone">Phone</label>
         <input
@@ -58,9 +59,9 @@
           name="post-mail"
           value="post-mail"
         />
-        <label for="postal-mail">Postal Mail</label><br />
-        <input type="color" id="favcolor" name="favcolor" value="#ff0000" />
+        <label for="post-mail">Postal Mail</label><br />
         <label for="favcolor">Favorite color:</label>
+        <input type="color" id="favcolor" name="favcolor" value="#ff0000" />
       </fieldset>
       <fieldset>
         <legend>Additional Details:</legend>
@@ -70,8 +71,9 @@
           <option value="Internet"></option>
           <option value="Linkedin"></option>
           <option value="Friends"></option>
-          <option value="Advertisement"></option></datalist
-        ><br />
+          <option value="Advertisement"></option>
+        </datalist>
+        <br />
         <span>Feedback/Comments:</span>
         <textarea name="feedback" rows="3" cols="25"></textarea>
       </fieldset>
@@ -84,6 +86,7 @@
         <input type="url" name="web-url" id="web-url" />
         <label for="web-url"></label><br />
         <span>Experience Level with HTML:</span>
+        <label for="exp-level"></label>
         <input
           type="range"
           name="exp-level"
@@ -92,7 +95,6 @@
           max="10"
           oninput="displayValue.value=experience.value"
         />
-        <label for="exp-level"></label>
       </fieldset>
       <input type="submit" value="submit" /><input type="reset" value="reset" />
     </form>
