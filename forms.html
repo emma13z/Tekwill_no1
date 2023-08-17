@@ -75,6 +75,25 @@
         <span>Feedback/Comments:</span>
         <textarea name="feedback" rows="3" cols="25"></textarea>
       </fieldset>
+      <fieldset>
+        <legend>Profile:</legend>
+        <span>Upload a Profile Picture:</span>
+        <input type="file" name="picture" id="picture" />
+        <label for="picture"></label><br />
+        <span>Website URL:</span>
+        <input type="url" name="web-url" id="web-url" />
+        <label for="web-url"></label><br />
+        <span>Experience Level with HTML:</span>
+        <input
+          type="range"
+          name="exp-level"
+          id="exp-level"
+          min="1"
+          max="10"
+          oninput="displayValue.value=experience.value"
+        />
+        <label for="exp-level"></label>
+      </fieldset>
     </form>
   </body>
 </html>
