@@ -10,11 +10,11 @@
       <fieldset>
         <legend>Basic User Information:</legend>
         <label for="fname">Full Name:</label>
-        <input type="text" id="fname" name="fname" /><br />
+        <input type="text" id="fname" name="fname" required /><br />
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" /><br />
+        <input type="email" id="email" name="email" required /><br />
         <label for="pwd">Password:</label>
-        <input type="password" id="pwd" name="pwd" />
+        <input type="password" id="pwd" name="pwd" required />
         <label for="pwd-con">Confirm Password:</label>
         <input type="password" id="pwd-con" name="pwd-con" /><br />
         <span>Gender:</span>
@@ -78,7 +78,7 @@
       <fieldset>
         <legend>Profile:</legend>
         <span>Upload a Profile Picture:</span>
-        <input type="file" name="picture" id="picture" />
+        <input type="file" name="picture" id="picture" accept=".jpg, .png" />
         <label for="picture"></label><br />
         <span>Website URL:</span>
         <input type="url" name="web-url" id="web-url" />
