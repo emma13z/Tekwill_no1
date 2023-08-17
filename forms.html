@@ -17,7 +17,7 @@
         <input type="password" id="pwd" name="pwd" required />
         <label for="pwd-con">Confirm Password:</label>
         <input type="password" id="pwd-con" name="pwd-con" /><br />
-        <span>Gender:</span>
+        <label for="gender">Gender:</label>
         <label for="male">Male</label>
         <input type="radio" id="male" value="male" />
         <label for="female">Female</label>
@@ -86,15 +86,16 @@
         <input type="url" name="web-url" id="web-url" />
         <label for="web-url"></label><br />
         <span>Experience Level with HTML:</span>
-        <label for="exp-level"></label>
+        <label for="experience"></label>
         <input
           type="range"
-          name="exp-level"
-          id="exp-level"
+          name="experience"
+          id="experience"
           min="1"
           max="10"
-          oninput="displayValue.value=experience.value"
+          oninput="DisplayValue.value=experience.value"
         />
+        <output id="DisplayValue"></output>
       </fieldset>
       <input type="submit" value="submit" /><input type="reset" value="reset" />
     </form>
