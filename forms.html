@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width-device-width, initial scale=1.0" />
+    <title>Registration Form</title>
+  </head>
+  <body>
+    <form action="/action_page.php" method="get">
+      <fieldset>
+        <legend>Basic User Information:</legend>
+        <label for="fname">Full Name:</label>
+        <input type="text" id="fname" name="fname" required /><br />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required /><br />
+        <label for="pwd">Password:</label>
+        <input type="password" id="pwd" name="pwd" required />
+        <label for="pwd-con">Confirm Password:</label>
+        <input type="password" id="pwd-con" name="pwd-con" /><br />
+        <label for="gender">Gender:</label>
+        <label for="male">Male</label>
+        <input type="radio" id="male" value="male" />
+        <label for="female">Female</label>
+        <input type="radio" id="female" value="female" />
+        <label for="other">Other</label>
+        <input type="radio" id="other" value="other" /><br />
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" />
+      </fieldset>
+      <fieldset>
+        <legend>Address Information:</legend>
+        <span>Street Address:</span>
+        <textarea name="street-address" rows="2" cols="20"></textarea><br />
+        <span>Country:</span>
+        <input list="countries" name="countries" />
+        <datalist id="countries">
+          <option value="USA"></option>
+          <option value="UK"></option>
+          <option value="Belgium"></option>
+          <option value="France"></option>
+          <option value="Spain"></option>
+        </datalist>
+        <br />
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" /><br />
+        <label for="postal-code">Postal Code:</label>
+        <input type="number" id="postal-code" name="postal-code" /><br />
+      </fieldset>
+      <fieldset>
+        <legend>Preferences:</legend>
+        <span>Preferred Contact Method:</span>
+        <input type="checkbox" id="email1" name="email1" value="email1" />
+        <label for="email1">Email</label>
+        <input type="checkbox" id="phone" name="phone" value="phone" />
+        <label for="phone">Phone</label>
+        <input
+          type="checkbox"
+          id="post-mail"
+          name="post-mail"
+          value="post-mail"
+        />
+        <label for="post-mail">Postal Mail</label><br />
+        <label for="favcolor">Favorite color:</label>
+        <input type="color" id="favcolor" name="favcolor" value="#ff0000" />
+      </fieldset>
+      <fieldset>
+        <legend>Additional Details:</legend>
+        <span>How did you hear about us?</span>
+        <input list="sources" name="sources" />
+        <datalist id="sources">
+          <option value="Internet"></option>
+          <option value="Linkedin"></option>
+          <option value="Friends"></option>
+          <option value="Advertisement"></option>
+        </datalist>
+        <br />
+        <span>Feedback/Comments:</span>
+        <textarea name="feedback" rows="3" cols="25"></textarea>
+      </fieldset>
+      <fieldset>
+        <legend>Profile:</legend>
+        <span>Upload a Profile Picture:</span>
+        <input type="file" name="picture" id="picture" accept=".jpg, .png" />
+        <label for="picture"></label><br />
+        <span>Website URL:</span>
+        <input type="url" name="web-url" id="web-url" />
+        <label for="web-url"></label><br />
+        <span>Experience Level with HTML:</span>
+        <label for="experience"></label>
+        <input
+          type="range"
+          name="experience"
+          id="experience"
+          min="1"
+          max="10"
+          oninput="DisplayValue.value=experience.value"
+        />
+        <output id="DisplayValue"></output>
+      </fieldset>
+      <input type="submit" value="submit" /><input type="reset" value="reset" />
+    </form>
+  </body>
+</html>
