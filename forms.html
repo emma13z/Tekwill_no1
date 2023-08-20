@@ -4,100 +4,183 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width-device-width, initial scale=1.0" />
     <title>Registration Form</title>
+    <style>
+      div {
+        padding: 10px;
+        margin: 10px;
+      }
+      legend {
+        font-family: sans-serif;
+        font-style: italic;
+        font-size: 20px;
+        font-weight: normal;
+        color: rgb(58, 155, 155);
+      }
+      fieldset {
+        font-weight: bold;
+        border-color: rgb(58, 155, 155);
+        border-radius: 5px;
+        width: 500px;
+      }
+      label,
+      span {
+        line-height: 2;
+      }
+      input,
+      textarea {
+        padding: 5px;
+        border-radius: 5px;
+        width: 480px;
+        height: 25px;
+      }
+      .submit {
+        width: 100px;
+        height: 35px;
+        background-color: rgb(7, 146, 193);
+        color: white;
+        border-radius: 10px;
+      }
+      .reset {
+        width: 100px;
+        height: 35px;
+        background-color: rgb(140, 136, 136);
+        color: white;
+        border-radius: 10px;
+      }
+    </style>
   </head>
   <body>
     <form action="/action_page.php" method="get">
-      <fieldset>
-        <legend>Basic User Information:</legend>
-        <label for="fname">Full Name:</label>
-        <input type="text" id="fname" name="fname" required /><br />
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required /><br />
-        <label for="pwd">Password:</label>
-        <input type="password" id="pwd" name="pwd" required />
-        <label for="pwd-con">Confirm Password:</label>
-        <input type="password" id="pwd-con" name="pwd-con" /><br />
-        <label for="gender">Gender:</label>
-        <label for="male">Male</label>
-        <input type="radio" id="male" value="male" />
-        <label for="female">Female</label>
-        <input type="radio" id="female" value="female" />
-        <label for="other">Other</label>
-        <input type="radio" id="other" value="other" /><br />
-        <label for="date">Date:</label>
-        <input type="date" id="date" name="date" />
-      </fieldset>
-      <fieldset>
-        <legend>Address Information:</legend>
-        <span>Street Address:</span>
-        <textarea name="street-address" rows="2" cols="20"></textarea><br />
-        <span>Country:</span>
-        <input list="countries" name="countries" />
-        <datalist id="countries">
-          <option value="USA"></option>
-          <option value="UK"></option>
-          <option value="Belgium"></option>
-          <option value="France"></option>
-          <option value="Spain"></option>
-        </datalist>
-        <br />
-        <label for="city">City:</label>
-        <input type="text" id="city" name="city" /><br />
-        <label for="postal-code">Postal Code:</label>
-        <input type="number" id="postal-code" name="postal-code" /><br />
-      </fieldset>
-      <fieldset>
-        <legend>Preferences:</legend>
-        <span>Preferred Contact Method:</span>
-        <input type="checkbox" id="email1" name="email1" value="email1" />
-        <label for="email1">Email</label>
-        <input type="checkbox" id="phone" name="phone" value="phone" />
-        <label for="phone">Phone</label>
-        <input
-          type="checkbox"
-          id="post-mail"
-          name="post-mail"
-          value="post-mail"
-        />
-        <label for="post-mail">Postal Mail</label><br />
-        <label for="favcolor">Favorite color:</label>
-        <input type="color" id="favcolor" name="favcolor" value="#ff0000" />
-      </fieldset>
-      <fieldset>
-        <legend>Additional Details:</legend>
-        <span>How did you hear about us?</span>
-        <input list="sources" name="sources" />
-        <datalist id="sources">
-          <option value="Internet"></option>
-          <option value="Linkedin"></option>
-          <option value="Friends"></option>
-          <option value="Advertisement"></option>
-        </datalist>
-        <br />
-        <span>Feedback/Comments:</span>
-        <textarea name="feedback" rows="3" cols="25"></textarea>
-      </fieldset>
-      <fieldset>
-        <legend>Profile:</legend>
-        <span>Upload a Profile Picture:</span>
-        <input type="file" name="picture" id="picture" accept=".jpg, .png" />
-        <label for="picture"></label><br />
-        <span>Website URL:</span>
-        <input type="url" name="web-url" id="web-url" />
-        <label for="web-url"></label><br />
-        <span>Experience Level with HTML:</span>
-        <label for="experience"></label>
-        <input
-          type="range"
-          name="experience"
-          id="experience"
-          min="1"
-          max="10"
-          oninput="DisplayValue.value=experience.value"
-        />
-        <output id="DisplayValue"></output>
-      </fieldset>
-      <input type="submit" value="submit" /><input type="reset" value="reset" />
+      <div>
+        <fieldset>
+          <legend>Basic User Information:</legend>
+          <label for="fname">Full Name:</label><br />
+          <input type="text" id="fname" name="fname" required /><br />
+          <label for="email">Email:</label><br />
+          <input type="email" id="email" name="email" required /><br />
+          <label for="pwd">Password:</label><br />
+          <input type="password" id="pwd" name="pwd" required /><br />
+          <label for="pwd-con">Confirm Password:</label><br />
+          <input type="password" id="pwd-con" name="pwd-con" /><br />
+          <label for="gender">Gender:</label><br />
+          <label for="male" style="font-weight: normal">Male</label>
+          <input type="radio" id="male" value="male" style="width: 15px" />
+          <label for="female" style="font-weight: normal">Female</label>
+          <input type="radio" id="female" value="female" style="width: 15px" />
+          <label for="other" style="font-weight: normal">Other</label>
+          <input
+            type="radio"
+            id="other"
+            value="other"
+            style="width: 15px"
+          /><br />
+          <label for="birth-date">Date of Birth:</label><br />
+          <input type="date" id="birth-date" name="birth-date" />
+        </fieldset>
+      </div>
+      <div>
+        <fieldset>
+          <legend>Address Information:</legend>
+          <span>Street Address:</span><br />
+          <textarea name="street-address" rows="2" cols="20"></textarea><br />
+          <span>Country:</span><br />
+          <input list="countries" name="countries" />
+          <datalist id="countries">
+            <option value="USA"></option>
+            <option value="UK"></option>
+            <option value="Belgium"></option>
+            <option value="France"></option>
+            <option value="Spain"></option>
+          </datalist>
+          <br />
+          <label for="city">City:</label><br />
+          <input type="text" id="city" name="city" /><br />
+          <label for="postal-code">Postal Code:</label><br />
+          <input type="number" id="postal-code" name="postal-code" /><br />
+        </fieldset>
+      </div>
+      <div>
+        <fieldset>
+          <legend>Preferences:</legend>
+          <span>Preferred Contact Method:</span><br />
+          <input
+            type="checkbox"
+            id="email1"
+            name="email1"
+            value="email1"
+            style="width: 15px"
+          />
+          <label for="email1" style="font-weight: normal">Email</label>
+          <input
+            type="checkbox"
+            id="phone"
+            name="phone"
+            value="phone"
+            style="width: 15px"
+          />
+          <label for="phone" style="font-weight: normal">Phone</label>
+          <input
+            type="checkbox"
+            id="post-mail"
+            name="post-mail"
+            value="post-mail"
+            style="width: 15px"
+          />
+          <label for="post-mail" style="font-weight: normal">Postal Mail</label>
+          <br />
+          <label for="favcolor">Favorite color:</label>
+          <input
+            type="color"
+            id="favcolor"
+            name="favcolor"
+            value="#ff0000"
+            style="width: 35px"
+          />
+        </fieldset>
+      </div>
+      <div>
+        <fieldset>
+          <legend>Additional Details:</legend>
+          <span>How did you hear about us?</span><br />
+          <input list="sources" name="sources" />
+          <datalist id="sources">
+            <option value="Internet"></option>
+            <option value="Linkedin"></option>
+            <option value="Friends"></option>
+            <option value="Advertisement"></option>
+          </datalist>
+          <br />
+          <span>Feedback/Comments:</span><br />
+          <textarea name="feedback" rows="3" cols="25"></textarea>
+        </fieldset>
+      </div>
+      <div>
+        <fieldset>
+          <legend>Profile:</legend>
+          <span>Upload a Profile Picture:</span>
+          <label for="picture"></label>
+          <input type="file" name="picture" id="picture" accept=".jpg, .png" />
+          <span>Website URL:</span><br />
+          <input type="url" name="web-url" id="web-url" />
+          <label for="web-url"></label><br />
+          <span>Experience Level with HTML:</span>
+          <label for="experience"></label>
+          <input
+            type="range"
+            name="experience"
+            id="experience"
+            min="1"
+            max="10"
+            oninput="DisplayValue.value=experience.value"
+            style="width: 100px"
+          />
+          <output id="DisplayValue"></output>
+        </fieldset>
+      </div>
+      <div>
+        <input type="submit" class="submit" value="submit" />
+        <input type="reset" class="reset" value="reset" />
+      </div>
     </form>
   </body>
 </html>
